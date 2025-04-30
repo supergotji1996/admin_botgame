@@ -26,6 +26,9 @@ const adminRoutes = require('./routes/admin');
 app.use('/api', authRoutes);
 app.use('/api/admin', adminRoutes);
 
+const clientApiRoutes = require('./routes/client_api');
+app.use('/api', clientApiRoutes);
+
 // Routes สำหรับ HTML - เพิ่มเส้นทางนี้
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
